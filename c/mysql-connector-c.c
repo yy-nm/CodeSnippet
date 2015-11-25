@@ -1,8 +1,9 @@
 /*
-	mysql version: 5.7
-	mysql connector version: 6.1.6
-	主要功能: 实现一次 mysql 数据库连接并执行一句 sql 语句并返回结构
-	调用方式: ./a.out {mysql-server-ip} {mysql-server-port} {db-name} {sql-str}
+	- mysql version: 5.7
+	- mysql connector version: 6.1.6
+	- 主要功能: 实现一次 mysql 数据库连接并执行一句 sql 语句并返回结构
+	- 调用方式: ./a.out {mysql-server-ip} {mysql-server-port} {db-name} {sql-str}
+		- ./a.out 127.0.0.1 3306 "information_schema" "select * from CHARACTER_SETS;"
  */
 
 
