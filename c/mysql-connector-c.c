@@ -1,6 +1,8 @@
 /*
 	mysql version: 5.7
 	mysql connector version: 6.1.6
+	主要功能: 实现一次 mysql 数据库连接并执行一句 sql 语句并返回结构
+	调用方式: ./a.out {mysql-server-ip} {mysql-server-port} {db-name} {sql-str}
  */
 
 
@@ -18,7 +20,7 @@ int main(int argc, void **args)
 	}
 	char *ip = (char *)args[1];
 	int port = *((int*)args[2]);
-	char *table_name = (char *) args[3];
+	char *db_name = (char *) args[3];
 	char *sql = (char *)args[4];
 
 	
@@ -27,7 +29,7 @@ int main(int argc, void **args)
 	mysql_init(&mysql);
 	
 	if (!mysql_real_connect(&mysql, "127.0.0.1", "root", "helloworld"
-					, table_name, 3306, NULL, 0))     {
+					, db_name, 3306, NULL, 0))     {
 		fprintf(stderr, "failed to connect mysql: error: %s\n"
 					, mysql_error(&mysql));
 		return -2;
