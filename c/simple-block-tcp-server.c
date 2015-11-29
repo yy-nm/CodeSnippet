@@ -1,4 +1,6 @@
 /*
+	- author: mardyu<michealyxd@hotmail.com
+	- create date: 11/25/2015
 	- 主要功能: 创建 tcp server 监听指定端口, 将客户端连接后发送的数据打印在 stdout 中, 使用多进程机制处理多用户的情况, 其中所使用的 io 函数都是阻塞类型的
 	- 调用方法: ./a.out {tcp-server-ip} {tcp-sever-port}
 		- ./a.out 0.0.0.0 12345

@@ -1,4 +1,6 @@
 /*
+	- author: mardyu<michealyxd@hotmail.com
+	- create date: 11/25/2015
 	- mysql version: 5.7
 	- mysql connector version: 6.1.6
 	- 主要功能: 实现一次 mysql 数据库连接并执行一句 sql 语句并返回结构
