@@ -52,25 +52,36 @@ flags = [
 # a "-std=<something>".
 # For a C project, you would set this to something like 'c99' instead of
 # 'c++11'.
+#'-std=c++11',
 '-std=c99',
 # ...and the same thing goes for the magic -x option which specifies the
 # language that the files to be compiled are written in. This is mostly
 # relevant for c++ headers.
 # For a C project, you would set this to 'c' instead of 'c++'.
 '-x',
+#'c++',
 'c',
-# This path will only work on OS X, but extra paths that don't exist are not
-# harmful
-'-I',
-'.',
 '-isystem',
 '/usr/include',
 '-isystem',
-'/usr/include/x86_64-linux-gnu/c++/4.8',
-'-isystem',
-'/usr/include/x86_64-linux-gnu',
-'-isystem',
 '/usr/include/linux',
+'-isystem',
+'/usr/include/x86_64-linux-gnu/',
+'-isystem',
+'/usr/lib/gcc/x86_64-linux-gnu/4.8/include',
+'-isystem',
+'/usr/src/linux-headers-3.13.0-65/include',
+'-isystem',
+'/usr/src/linux-headers-3.13.0-65/include/linux',
+'-isystem',
+'/usr/lib/gcc/x86_64-linux-gnu/4.8/include',
+
+#'-isystem',
+# This path will only work on OS X, but extra paths that don't exist are not
+# harmful
+#'/System/Library/Frameworks/Python.framework/Headers',
+'-I',
+'.',
 ]
 
 

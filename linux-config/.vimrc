@@ -70,7 +70,7 @@ call vundle#end()            " required
 let g:ycm_min_num_of_chars_for_completion = 1
 let g:ycm_confirm_extra_conf = 0
 let g:syntastic_always_populate_loc_list = 1 
-let g:ycm_key_invoke_completion = "<leader>p" 
+let g:ycm_key_invoke_completion = "<leader>p"
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
@@ -100,4 +100,3 @@ map <C-m> <leader>c<space>
 " set for authorinfo.vim plugin
 let g:vimrc_author='mardyu'
 let g:vimrc_email='michealyxd@hotmail.com'
-nnoremap <F4> :AuthorInfoDetect<CR>
