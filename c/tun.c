@@ -35,6 +35,10 @@ typedef struct in_addr INADDR;
 #define IP_LENGTH 129
 // must large than mtu(default: 1500)
 #define MAX_PACKAGE_SZ 3000
+/* TODO: reduce mtu of the new virtual network card, avoid length of package bigger than mtu cause split package
+ * the new virtual network card mtu = default mtu(1500) - udp_head_sz - ip_head_sz - eth_head_sz
+ * = 1500 - 8 - 24(ipv4)/40(ipv6) - 18
+ * */
 
 typedef struct multi_tunnel_tcp {
 	INADDR remote;
